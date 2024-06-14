@@ -19,9 +19,14 @@ BASE_APPS=[
     'django.contrib.staticfiles',
 ]
 
-LOCAL_APPS=[]
+LOCAL_APPS=[
+    'apps.users'
+]
 
-THIRD_APPS=[]
+THIRD_APPS=[
+    'rest_framework',
+    'simple_history',
+]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 
@@ -101,3 +106,5 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+## Cambiar la configuracion para que tome como el modelo del usuario al que creamos y no al default
+AUTH_USER_MODEL='users.User'
